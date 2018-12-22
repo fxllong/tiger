@@ -6,13 +6,16 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="tiger" />
+        <module name="tiger-gateway" />
+        <module name="tiger-registry" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="tiger" options="-parameters" />
+      <module name="tiger-gateway" options="-parameters" />
+      <module name="tiger-registry" options="-parameters" />
     </option>
   </component>
 </project>

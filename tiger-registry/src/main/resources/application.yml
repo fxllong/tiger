@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: tiger-registry
+server:
+  port: 10086
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:10086/eureka
