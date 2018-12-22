@@ -13,8 +13,8 @@ eureka:
     ip-address: 127.0.0.1
 zuul:
   prefix: /api
-#  routes:
-#    item-service: /item/**
+  routes:
+    item-service: /item/**
   sensitive-headers:
   add-host-header: true
 hystrix:

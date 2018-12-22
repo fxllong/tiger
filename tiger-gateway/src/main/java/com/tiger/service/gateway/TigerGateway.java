@@ -1,4 +1,4 @@
-package com.tiger.gateway;
+package com.tiger.service.gateway;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -9,15 +9,13 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.tiger.common</groupId>
-    <artifactId>tiger-registry</artifactId>
-
-    <dependencies>
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
-        </dependency>
-    </dependencies>
+    <groupId>com.tiger.service</groupId>
+    <artifactId>tiger-item</artifactId>
+    <packaging>pom</packaging>
+    <modules>
+        <module>tiger-item-interface</module>
+        <module>tiger-item-service</module>
+    </modules>
 
 
 </project>

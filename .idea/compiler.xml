@@ -7,6 +7,8 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="tiger-gateway" />
+        <module name="tiger-item-interface" />
+        <module name="tiger-item-service" />
         <module name="tiger-registry" />
       </profile>
     </annotationProcessing>
@@ -15,6 +17,8 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="tiger" options="-parameters" />
       <module name="tiger-gateway" options="-parameters" />
+      <module name="tiger-item-interface" options="-parameters" />
+      <module name="tiger-item-service" options="-parameters" />
       <module name="tiger-registry" options="-parameters" />
     </option>
   </component>
