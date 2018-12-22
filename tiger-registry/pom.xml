@@ -14,6 +14,7 @@
 
     <dependencies>
         <dependency>
+            <!-- 注意次出不要引错包  spring-cloud-netflix-eureka-server-->
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
         </dependency>

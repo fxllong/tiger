@@ -38,6 +38,11 @@
             <artifactId>tiger-item-interface</artifactId>
             <version>1.0.0-SNAPSHOT</version>
         </dependency>
+        <dependency>
+            <groupId>com.tiger.common</groupId>
+            <artifactId>tiger-common</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+        </dependency>
     </dependencies>
 
 

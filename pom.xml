@@ -11,6 +11,7 @@
         <module>tiger-registry</module>
         <module>tiger-gateway</module>
         <module>tiger-item</module>
+        <module>tiger-common</module>
     </modules>
     <packaging>pom</packaging>
 
