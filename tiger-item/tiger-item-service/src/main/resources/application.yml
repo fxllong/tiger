@@ -15,3 +15,6 @@ spring:
     url: jdbc:mysql://localhost:3306/leyou?useUnicode=true&characterEncoding=utf-8
     username: root
     password: 123456
+mybatis:
+  configuration:
+    log-impl: org.apache.ibatis.logging.slf4j.Slf4jImpl
