@@ -12,6 +12,7 @@
         <module>tiger-gateway</module>
         <module>tiger-item</module>
         <module>tiger-common</module>
+        <module>tiger-upload</module>
     </modules>
     <packaging>pom</packaging>
 

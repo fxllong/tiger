@@ -26,7 +26,7 @@ public class BrandService {
     @Autowired
     private BrandMapper brandMapper;
 
-    public PageResult<Brand> queryBrandListBykey(Integer page, Integer rows, String sortBy, Boolean desc, String key) {
+    public PageResult<Brand> queryBrandListByKey(Integer page, Integer rows, String sortBy, Boolean desc, String key) {
         //分页
         PageHelper.startPage(page,rows);
 
@@ -52,5 +52,20 @@ public class BrandService {
         return ps;
 
         //返回结果
+    }
+
+    public void addBrand(Brand brand, List<Long> ids) {
+        int count = brandMapper.insert(brand);
+        if(count!=1){
+            throw new TigerException(ExceptionEnum.BRAND_CREATE_FAILED);
+        }
+        //更新品牌分类表
+        for (Long cid : ids) {
+            count = brandMapper.saveCategoryBrand(cid, brand.getId());
+
+            if (count == 0) {
+                throw new TigerException(ExceptionEnum.BRAND_CREATE_FAILED);
+            }
+        }
     }
 }
