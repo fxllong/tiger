@@ -13,6 +13,7 @@
         <module>tiger-item</module>
         <module>tiger-common</module>
         <module>tiger-upload</module>
+        <module>tiger-search</module>
     </modules>
     <packaging>pom</packaging>
 

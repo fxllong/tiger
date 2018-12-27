@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.CollectionUtils;
 
+import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
 
@@ -26,6 +27,26 @@ public class CategoryService {
         c.setParentId(pid);
         List<Category> list = categoryMapper.select(c);
         if(CollectionUtils.isEmpty(list)){
+            throw new TigerException(ExceptionEnum.CATEGORY_NOT_FOUND);
+        }
+        return list;
+    }
+
+    public List<Category> queryCategoryByIds(List<Long> ids) {
+        List<Category> list = categoryMapper.selectByIdList(ids);
+        if(CollectionUtils.isEmpty(list)){
+            throw new TigerException(ExceptionEnum.CATEGORY_NOT_FOUND);
+        }
+        return list;
+
+    }
+
+    public List<Category> queryAllByCid3(Long id) {
+        Category c3 = categoryMapper.selectByPrimaryKey(id);
+        Category c2 = categoryMapper.selectByPrimaryKey(c3.getParentId());
+        Category c1 = categoryMapper.selectByPrimaryKey(c2.getParentId());
+        List<Category> list = Arrays.asList(c1, c2, c3);
+        if (CollectionUtils.isEmpty(list)) {
             throw new TigerException(ExceptionEnum.CATEGORY_NOT_FOUND);
         }
         return list;

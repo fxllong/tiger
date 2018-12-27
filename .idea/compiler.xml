@@ -11,6 +11,7 @@
         <module name="tiger-item-interface" />
         <module name="tiger-item-service" />
         <module name="tiger-registry" />
+        <module name="tiger-search" />
         <module name="tiger-upload" />
       </profile>
     </annotationProcessing>
@@ -23,6 +24,7 @@
       <module name="tiger-item-interface" options="-parameters" />
       <module name="tiger-item-service" options="-parameters" />
       <module name="tiger-registry" options="-parameters" />
+      <module name="tiger-search" options="-parameters" />
       <module name="tiger-upload" options="-parameters" />
     </option>
   </component>

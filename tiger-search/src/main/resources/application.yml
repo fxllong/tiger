@@ -1,0 +1,25 @@
+server:
+  port: 8093
+spring:
+  application:
+    name: search-service
+  data:
+    elasticsearch:
+      cluster-name: elasticsearch_xinglongfan
+      cluster-nodes: 127.0.0.1:9300
+  jackson:
+    default-property-inclusion: non_null
+  rabbitmq:
+    virtual-host: /tiger
+    username: tiger
+    password: tiger
+    host: 127.0.0.1
+    port: 5672
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:10086/eureka
+    registry-fetch-interval-seconds: 5
+  instance:
+    prefer-ip-address: true
+    ip-address: 127.0.0.1

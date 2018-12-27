@@ -6,7 +6,6 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 /**
- * @author bystander
  * @date 2018/9/15
  */
 @Data

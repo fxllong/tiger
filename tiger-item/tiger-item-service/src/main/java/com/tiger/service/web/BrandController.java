@@ -2,9 +2,8 @@ package com.tiger.service.web;
 
 import com.tiger.common.vo.PageResult;
 import com.tiger.item.pojo.Brand;
-import com.tiger.item.pojo.Category;
+import com.tiger.item.vo.BrandVo;
 import com.tiger.service.service.BrandService;
-import com.tiger.service.service.CategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -26,7 +25,7 @@ public class BrandController {
     @Autowired
     private BrandService brandService;
 
-    @GetMapping("list")
+    @GetMapping("page")
     public ResponseEntity<PageResult<Brand>> queryCategoryByPid(
             @RequestParam(value = "page", defaultValue = "1") Integer page,
             @RequestParam(value = "rows", defaultValue = "5") Integer rows,
@@ -42,4 +41,61 @@ public class BrandController {
         brandService.addBrand(brand, cids);
         return new ResponseEntity(HttpStatus.CREATED);
     }
+
+    /**
+     * 更新品牌
+     *
+     * @param brandVo
+     * @return
+     */
+    @PutMapping
+    public ResponseEntity<Void> updateBrand(BrandVo brandVo) {
+        brandService.updateBrand(brandVo);
+        return ResponseEntity.ok().build();
+    }
+
+    /**
+     * 删除品牌
+     *
+     * @param bid
+     * @return
+     */
+    @DeleteMapping("bid/{bid}")
+    public ResponseEntity<Void> deleteBrand(@PathVariable("bid") Long bid) {
+        brandService.deleteBrand(bid);
+        return ResponseEntity.ok().build();
+    }
+
+    /**
+     * 根据分类ID查询品牌
+     *
+     * @param cid
+     * @return
+     */
+    @GetMapping("cid/{cid}")
+    public ResponseEntity<List<Brand>> queryBrandByCid(@PathVariable("cid") Long cid) {
+        return ResponseEntity.ok(brandService.queryBrandByCid(cid));
+    }
+
+    /**
+     * 根据商品品牌ID查询品牌
+     *
+     * @param id
+     * @return
+     */
+    @GetMapping("{id}")
+    public ResponseEntity<Brand> queryById(@PathVariable("id") Long id) {
+        return ResponseEntity.ok(brandService.queryBrandByBid(id));
+    }
+
+    /**
+     * 根据ids查询品牌
+     * @param ids
+     * @return
+     */
+    @GetMapping("list")
+    public ResponseEntity<List<Brand>> queryBrandsByIds(@RequestParam("ids") List<Long> ids) {
+        return ResponseEntity.ok(brandService.queryBrandByIds(ids));
+    }
+
 }

@@ -1,7 +1,10 @@
 package com.tiger.upload.service;
 
+import com.google.gson.Gson;
 import com.qiniu.common.QiniuException;
 import com.qiniu.http.Response;
+import com.tiger.common.utils.JsonUtils;
+import com.tiger.upload.util.QiNiuPutRet;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -18,6 +21,8 @@ import java.io.File;
 public class QiNiuServiceImplTest {
     @Autowired
     private IQiNiuService qiNiuService;
+    @Autowired
+    private Gson gson;
 
     @Test
     public void testUploadFile() {
@@ -28,6 +33,9 @@ public class QiNiuServiceImplTest {
 
         try {
             Response response = qiNiuService.uploadFile(file);
+            QiNiuPutRet ret = gson.fromJson(response.bodyString(), QiNiuPutRet.class);
+            String imageUrl = "http://pkbnsx71f.bkt.clouddn.com/" + ret.key;
+            System.out.println("==========="+imageUrl);
             Assert.assertTrue(response.isOK());
         } catch (QiniuException e) {
             e.printStackTrace();

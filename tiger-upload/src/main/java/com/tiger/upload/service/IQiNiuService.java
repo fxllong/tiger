@@ -2,6 +2,7 @@ package com.tiger.upload.service;
 
 import com.qiniu.common.QiniuException;
 import com.qiniu.http.Response;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.io.File;
 import java.io.InputStream;
