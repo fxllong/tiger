@@ -4,6 +4,7 @@ import com.tiger.common.vo.PageResult;
 import com.tiger.item.pojo.Spu;
 import com.tiger.search.pojo.Goods;
 import com.tiger.search.repository.GoodsRepository;
+import com.tiger.search.service.SearchService;
 import com.tiger.search.service.SearchService2;
 import org.junit.Test;
 import org.junit.runner.RunWith;

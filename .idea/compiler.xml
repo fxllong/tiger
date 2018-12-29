@@ -6,26 +6,42 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="tiger-auth" />
+        <module name="tiger-cms-interface" />
+        <module name="tiger-cms-service" />
         <module name="tiger-common" />
         <module name="tiger-gateway" />
+        <module name="tiger-index" />
         <module name="tiger-item-interface" />
         <module name="tiger-item-service" />
+        <module name="tiger-page" />
         <module name="tiger-registry" />
         <module name="tiger-search" />
         <module name="tiger-upload" />
+        <module name="tiger-user-interface" />
+        <module name="tiger-user-service" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="tiger" options="-parameters" />
+      <module name="tiger-auth" options="-parameters" />
+      <module name="tiger-cms" options="-parameters" />
+      <module name="tiger-cms-interface" options="-parameters" />
+      <module name="tiger-cms-service" options="-parameters" />
       <module name="tiger-common" options="-parameters" />
       <module name="tiger-gateway" options="-parameters" />
+      <module name="tiger-index" options="-parameters" />
       <module name="tiger-item-interface" options="-parameters" />
       <module name="tiger-item-service" options="-parameters" />
+      <module name="tiger-page" options="-parameters" />
       <module name="tiger-registry" options="-parameters" />
       <module name="tiger-search" options="-parameters" />
       <module name="tiger-upload" options="-parameters" />
+      <module name="tiger-user" options="-parameters" />
+      <module name="tiger-user-interface" options="-parameters" />
+      <module name="tiger-user-service" options="-parameters" />
     </option>
   </component>
 </project>

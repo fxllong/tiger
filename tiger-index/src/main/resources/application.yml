@@ -1,0 +1,15 @@
+server:
+  port: 8852
+spring:
+  application:
+    name: index-service
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8848/eureka
+  instance:
+    prefer-ip-address: true
+    ip-address: 127.0.0.1
+tiger:
+  page:
+    path: /Users/bystander/upload

@@ -1,0 +1,20 @@
+server:
+  port: 8851
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8848/eureka
+  instance:
+    prefer-ip-address: true
+    ip-address: 127.0.0.1
+spring:
+  application:
+    name: cms-service
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver #这个可以省略，可以根据url推断驱动
+    url: jdbc:mysql://localhost:3306/litemall?useUnicode=true&characterEncoding=utf-8
+    username: root
+    password: 123456
+mybatis:
+  configuration:
+    log-impl: org.apache.ibatis.logging.slf4j.Slf4jImpl

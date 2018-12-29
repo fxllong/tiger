@@ -14,6 +14,11 @@
         <module>tiger-common</module>
         <module>tiger-upload</module>
         <module>tiger-search</module>
+        <module>tiger-page</module>
+        <module>tiger-cms</module>
+        <module>tiger-index</module>
+        <module>tiger-user</module>
+        <module>tiger-auth</module>
     </modules>
     <packaging>pom</packaging>
 
@@ -69,6 +74,21 @@
                 <groupId>com.github.tobato</groupId>
                 <artifactId>fastdfs-client</artifactId>
                 <version>${fastDFS.client.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.binarywang</groupId>
+                <artifactId>weixin-java-pay</artifactId>
+                <version>3.2.0</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>3.8.1</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.binarywang</groupId>
+                <artifactId>weixin-java-miniapp</artifactId>
+                <version>3.2.0</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

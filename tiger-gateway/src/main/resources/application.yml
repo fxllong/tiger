@@ -1,12 +1,12 @@
 server:
-  port: 10010
+  port: 8849
 spring:
   application:
     name: api-gateway
 eureka:
   client:
     service-url:
-      defaultZone: http://127.0.0.1:10086/eureka
+      defaultZone: http://127.0.0.1:8848/eureka
     registry-fetch-interval-seconds: 5
   instance:
     prefer-ip-address: true
@@ -15,6 +15,7 @@ zuul:
   prefix: /api
   routes:
     item-service: /item/**
+    cms-service: /cms/**
     upload-service:
       path: /upload/**
       service: upload-service
